@@ -1,0 +1,46 @@
+{
+    "name": "intern-hiring-challenge",
+    "version": "0.1.0",
+    "private": true,
+    "author": "BigBlue",
+    "dependencies": {
+        "bootstrap": "^5.0.0",
+        "pretty-format": "^25.1.0",
+        "react": "^16.8.4",
+        "react-apexcharts": "^1.3.7",
+        "react-beautiful-dnd": "^13.0.0",
+        "react-document-title": "^2.0.3",
+        "react-dom": "^16.13.1",
+        "react-infinite-scroll-component": "^5.1.0",
+        "react-instantsearch-dom": "^5.4.0",
+        "react-router": "^5.1.2",
+        "react-router-dom": "^5.1.2",
+        "react-tracking": "^8.1.0"
+    },
+    "scripts": {
+        "start": "npm run parcel:main",
+        "ts:watch": "tsc --watch --noEmit",
+        "old:start": "PORT=1234 react-app-rewired start --scripts-version react-scripts-ts",
+        "build": "rm -r build/* || true && react-app-rewired build --scripts-version react-scripts-ts",
+        "test": "jest",
+        "test:watch": "jest --watch",
+        "admin:start": "ADMIN=true PORT=1235 react-app-rewired start --scripts-version react-scripts-ts",
+        "admin:build": "rm -r build/* || true && ADMIN=true react-app-rewired build --scripts-version react-scripts-ts",
+        "test:debug": "react-app-rewired --inspect-brk test --scripts-version react-scripts-ts --runInBand --env=jsdom",
+        "eject": "react-scripts-ts eject",
+        "parcel:main": "parcel src/index.html --port 1234",
+        "parcel:admin": "parcel src/app_admin/index.html --port 1235",
+        "setup:user": "ts-node --project scripts/tsconfig.json scripts/setupFirstUser.ts",
+        "analyze": "source-map-explorer build/static/js/index.*",
+        "svgr": "svgr",
+        "prettier": "prettier --write './src/**/*.{tsx,ts}'"
+    },
+    "devDependencies": {
+        "@types/node": "^12.12.14",
+        "@types/react": "^16.8.17",
+        "@types/react-dom": "^16.9.8",
+        "react-scripts-ts": "^2.17.0",
+        "parcel-bundler": "^1.12.4",
+        "typescript": "^3.7.3"
+    }
+}

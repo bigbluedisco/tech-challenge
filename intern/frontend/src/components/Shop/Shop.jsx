@@ -9,7 +9,7 @@ const Shop = (props) => {
                     <div className="col-md-4 mt-4" key={index}>
                         <div className="card">
                             <img
-                                className="card-img-top"
+                                className="card-img-top mw-100 mh-100"
                                 src={product.image_url}
                                 alt={product.name}
                             />
