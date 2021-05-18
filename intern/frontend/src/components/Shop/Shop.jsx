@@ -6,8 +6,8 @@ const Shop = (props) => {
         <div className="card m-4 w-50 pb-4">
             <h1 className="card-header">Shop</h1>
             <div className="d-flex justify-content-between flex-wrap">
-                {props.products.map((product, index) => (
-                    <div className="col-md-4 mt-4" key={index}>
+                {props.products.map((product) => (
+                    <div className="col-md-4 mt-4" key={product.id}>
                         <div className="card">
                             <div className="card-img-container">
                                 <img

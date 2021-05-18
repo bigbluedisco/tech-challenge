@@ -13,8 +13,8 @@ const Cart = (props) => {
                     </tr>
                 </thead>
                 <tbody>
-                    {props.products.map((product, index) => (
-                        <tr key={index}>
+                    {props.products.map((product) => (
+                        <tr key={product.id}>
                             <td>{product.name}</td>
                             <td>{props.inCartProducts[product.id]}</td>
                             <td>{product.price}$</td>
