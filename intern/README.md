@@ -27,7 +27,7 @@ The style is handled through the Bootstrap library. So the style is determined b
 
 ⚠️ In order to run the backend you first need to complete the backend code. For that search for the `TODO` and write the missing lines. Don't worry you don't need to add many code lines. 
 
-After that you can run the backend: to start the server, open a new terminal, go to `intern/backend` and run the following command: `go run products.go`. 
+Once completed you can run the backend: to start the server, open a new terminal, go to `intern/backend` and run the following command: `go run products.go`. 
 
 ### Frontend
 
