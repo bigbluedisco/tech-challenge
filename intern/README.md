@@ -8,7 +8,7 @@ This README will present you the code, how to run it and the most important: you
 
 This *intern* folder contains a *backend* folder with incomplete code and a *frontend* folder that contains a src folder with 2 files `index.html` and `index.tsx` and 2 folders *Cart* and *Shop*. 
 
-`index.html` is the HTML page that will be displayed on your browser when you run the code. But there is not much code in it. Indeed the "interesting" code is in the Javascript files whose root is the file `index.jsx` that imports the components `Cart` and `Shop` from the corresponding folders. 
+`index.html` is the HTML page that will be displayed on your browser when you run the code. But there is not much code in it. Indeed the "interesting" code is in the Javascript files whose root is the file `index.jsx` that imports the components `Cart` and `Shop`. 
 
 Running this code (see how below) displays a page with a shop section and a cart section. 
 
