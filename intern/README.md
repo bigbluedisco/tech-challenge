@@ -8,7 +8,7 @@ This README will present you the subject, the code, how to run it and the most i
 
 You will work on an e-shop with a list of 6 products (with their name, price, image and "Add to cart" button) fetched from the backend and displayed in the frontend, along with a cart in which you can see items added to cart. 
 
-<img width="1438" alt="image" src="https://user-images.githubusercontent.com/48725727/118610522-1f316e80-b7bc-11eb-9975-188354a3a573.png">
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/48725727/118649510-de4d5000-b7e3-11eb-8da9-9c298d05402d.png">
 
 ## The code
 
