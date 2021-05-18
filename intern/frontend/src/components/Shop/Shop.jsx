@@ -1,4 +1,5 @@
 import * as React from 'react'
+import './index.css'
 
 const Shop = (props) => {
     return (
@@ -8,11 +9,13 @@ const Shop = (props) => {
                 {props.products.map((product, index) => (
                     <div className="col-md-4 mt-4" key={index}>
                         <div className="card">
-                            <img
-                                className="card-img-top mw-100 mh-100"
-                                src={product.image_url}
-                                alt={product.name}
-                            />
+                            <div className="card-img-container">
+                                <img
+                                    className="card-img-top h-100 w-100"
+                                    src={product.image_url}
+                                    alt={product.name}
+                                />
+                            </div>
                             <div className="card-body">
                                 <span className="card-title">
                                     <div className="d-flex justify-content-between">

@@ -11,7 +11,7 @@ type Product struct {
 	ID           string `json:"id"`
 	Name         string `json:"name"`
 	Price        int    `json:"price"`
-	Stock int    `json:"stock"`
+	Stock		 int    `json:"stock"`
 	ImageURL     string `json:"image_url"`
 }
 
@@ -66,6 +66,9 @@ var products = []*Product{
 
 // Handler replies with the products response to any request
 func Handler(w http.ResponseWriter, r *http.Request) {
+
+	w.Header().Set("Access-Control-Allow-Origin", "*")
+
 	b, err := json.Marshal(&ProductsResponse{
 		Products: products,
 	})
