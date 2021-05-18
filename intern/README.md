@@ -2,21 +2,21 @@
 
 Hello, get yourself ready for this intern challenge ! :fire:
 
-This README will present you the code, how to run it and the most important: your missions. 
+This README will present you the subject, the code, how to run it and the most important: your missions. 
+
+## The subject
+
+You will work on an e-shop with a list of 6 products (with their name, price, image and "Add to cart" button) fetched from the backend and displayed in the frontend, along with a cart in which you can see items added to cart. 
+
+<img width="1438" alt="image" src="https://user-images.githubusercontent.com/48725727/118610522-1f316e80-b7bc-11eb-9975-188354a3a573.png">
 
 ## The code
 
 This *intern* folder contains a *backend* folder with incomplete code and a *frontend* folder that contains a src folder with 2 files `index.html` and `index.tsx` and 2 folders *Cart* and *Shop*. 
 
-`index.html` is the HTML page that will be displayed on your browser when you run the code. But there is not much code in it. Indeed the "interesting" code is in the Javascript files whose root is the file `index.jsx` that imports the components `Cart` and `Shop` from the corresponding folders. 
+`index.html` is the HTML page that will be displayed on your browser when you run the code. But there is not much code in it. Indeed the "interesting" code is in the Javascript files whose root is the file `index.jsx` that imports the components `Cart` and `Shop`. 
 
-Running this code (see how below) displays a page with a shop section and a cart section. 
-
-The Shop section contains 6 products with their name, price, image and "Add to cart" button. These products are hardcoded in the backend
-
-The Cart section contains a table with all the items and how many has been added to cart. Clicking on "Add to cart" button in the Shop updates this number. 
-
-<img width="1438" alt="image" src="https://user-images.githubusercontent.com/48725727/118610522-1f316e80-b7bc-11eb-9975-188354a3a573.png">
+Running this code displays a page with the e-shop. 
 
 The style is handled through the Bootstrap library. So the style is determined by all the `className=...`. You don't have to take care of that except if you want to reuse some style for what you add in the code. 
 
@@ -25,9 +25,9 @@ The style is handled through the Bootstrap library. So the style is determined b
 
 ### Backend 
 
-⚠️ In order to run the backend you first need to complete the backend code. For that search for the `TODO` and write the missing lines. Don't worry you don't need to add many code lines. 
+⚠️ In order to run the backend you first need to complete the backend code. For that search for the `TODO` lines in the `products.go` file and write the missing lines. Don't worry you don't need to add many code lines. 
 
-After that you can run the backend: to start the server, open a new terminal, go to `intern/backend` and run the following command: `go run products.go`. 
+Once completed you can run the backend: to start the server, open a new terminal, go to `intern/backend` and run the following command: `go run products.go`. 
 
 ### Frontend
 
@@ -63,10 +63,10 @@ Backend missions:
 
 Frontend missions: 
 - Compute the total price of the products in the cart. 
-- Add a button to remove some products from cart. 
-- Show remaining stock of products in the shop (updates when clicking on Buy)
-- Disable buying a product if there is no stock available anymore. 
-- Remove an item line from the cart if there is none of it in the cart. 
+- Add a remove button next to each product in the cart.
+- Show remaining stock for each product in the shop.
+- Disable adding a product to cart if there is no stock available anymore. 
+- Remove an item line from the cart if the quantity is zero.
 
 You are free to do whatever you want concerning the design of what you add but try to make it look good. You can reuse the style of already present components. 
 
