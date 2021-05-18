@@ -47,7 +47,7 @@ const App = () => {
     }, [products])
 
     // Add a product to cart. 
-    // Modify corresponding numbers in availableProducts and inCartProducts 
+    // Updating corresponding quantities in availableProducts and inCartProducts 
     const onAddToCart = (productId) => {
         const availableBeforeAdd = availableProducts[productId]
         setAvailableProducts({
