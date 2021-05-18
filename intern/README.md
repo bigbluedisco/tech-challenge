@@ -64,7 +64,7 @@ Backend missions:
 Frontend missions: 
 - Compute the total price of the products in the cart. 
 - Add a button to remove some products from cart. 
-- Show remaining stock of products in the shop (updates when clicking on Buy)
+- Show remaining stock for each product in the shop
 - Disable buying a product if there is no stock available anymore. 
 - Remove an item line from the cart if there is none of it in the cart. 
 
