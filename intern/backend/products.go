@@ -1,9 +1,7 @@
 package main
 
 import (
-	"encoding/json"
 	"fmt"
-	"log"
 	"net/http"
 )
 
@@ -69,9 +67,8 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 
-	b, err := json.Marshal(&ProductsResponse{
-		Products: products,
-	})
+	//// TODO
+	//// Add code to get the list of products
 
 	if err != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
@@ -88,8 +85,6 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 func main() {
 
 	fmt.Println("Starting server at port 8080. URL: http://localhost:8080/")
-	http.HandleFunc("/products", Handler)
-	if err := http.ListenAndServe(":8080", nil); err != nil {
-		log.Fatal(err)
-	}
+
+	//// TODO add code to start a local web server at port 8080 that handles all requests with Handler
 }
