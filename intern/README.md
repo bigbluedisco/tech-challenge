@@ -66,7 +66,7 @@ Frontend missions:
 - Add a button to remove some products from cart. 
 - Show remaining stock for each product in the shop
 - Disable adding a product to cart if there is no stock available anymore. 
-- Remove an item line from the cart if there is none of it in the cart. 
+- Remove an item line from the cart if the quantity is zero
 
 You are free to do whatever you want concerning the design of what you add but try to make it look good. You can reuse the style of already present components. 
 
