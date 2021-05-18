@@ -4,8 +4,22 @@ import { Cart } from './components/Cart/Cart'
 import { Shop } from './components/Shop/Shop'
 
 const App = () => {
+
     const [products, setProducts] = React.useState([])
+
+    // availableProducts is an object that looks like
+    // { ['product 1 name']: number of products 1 available,
+    //   ['product 2 name']: number of products 2 available,
+    //    .... 
+    //  }
     const [availableProducts, setAvailableProducts] = React.useState({})
+
+    // inCartProducts is an object that looks like
+    // { ['product 1 name']: number of products 1 in cart,
+    //   ['product 2 name']: number of products 2 in cart,
+    //    .... 
+    //  }
+    // A product item is either available or in cart. 
     const [inCartProducts, setInCartProducts] = React.useState({})
 
     // Fetch products from the backend
@@ -18,13 +32,7 @@ const App = () => {
             })
     }, [])
 
-    // availableProducts is an object that looks like
-    // { ['product 1 name']: number of products 1 available,
-    //   ['product 2 name']: number of products 2 available,
-    //    .... 
-    //  }
-    // A product is available if not in the cart. 
-    // inCartProducts has the same form as availableProducts but a product is "in cart" if put in the cart. 
+    
     // Whenever products are fetched, we set availableProducts and inCartProducts to their initial values. 
     React.useEffect(() => {
         const initialAvailableProducts = products.reduce((acc, curr) => {
