@@ -65,7 +65,7 @@ Frontend missions:
 - Compute the total price of the products in the cart. 
 - Add a button to remove some products from cart. 
 - Show remaining stock for each product in the shop
-- Disable buying a product if there is no stock available anymore. 
+- Disable adding a product to cart if there is no stock available anymore. 
 - Remove an item line from the cart if there is none of it in the cart. 
 
 You are free to do whatever you want concerning the design of what you add but try to make it look good. You can reuse the style of already present components. 
