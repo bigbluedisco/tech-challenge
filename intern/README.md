@@ -57,7 +57,7 @@ Frontend is now running and you can start coding!
 ## Your missions
 
 Backend missions: 
-- Complete the backend code (if not already done):
+- Complete the backend code where there are TODOs (if not already done):
   - Add code to get the list of products in the Handler. 
   - Add code to start a local web server at port 8080 that handles all requests with Handler in the main function. 
 
