@@ -10,7 +10,7 @@ This *intern* folder contains a *backend* folder with incomplete code and a *fro
 
 `index.html` is the HTML page that will be displayed on your browser when you run the code. But there is not much code in it. Indeed the "interesting" code is in the Javascript files whose root is the file `index.jsx` that imports the components `Cart` and `Shop`. 
 
-Running this code (see how below) displays a page with a shop section and a cart section. 
+Running this code displays a page with a shop section and a cart section. 
 
 The Shop section contains 6 products with their name, price, image and "Add to cart" button. These products are hardcoded in the backend
 
