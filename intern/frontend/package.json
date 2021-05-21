@@ -19,21 +19,7 @@
     },
     "scripts": {
         "start": "npm run parcel:main",
-        "ts:watch": "tsc --watch --noEmit",
-        "old:start": "PORT=1234 react-app-rewired start --scripts-version react-scripts-ts",
-        "build": "rm -r build/* || true && react-app-rewired build --scripts-version react-scripts-ts",
-        "test": "jest",
-        "test:watch": "jest --watch",
-        "admin:start": "ADMIN=true PORT=1235 react-app-rewired start --scripts-version react-scripts-ts",
-        "admin:build": "rm -r build/* || true && ADMIN=true react-app-rewired build --scripts-version react-scripts-ts",
-        "test:debug": "react-app-rewired --inspect-brk test --scripts-version react-scripts-ts --runInBand --env=jsdom",
-        "eject": "react-scripts-ts eject",
         "parcel:main": "parcel src/index.html --port 1234",
-        "parcel:admin": "parcel src/app_admin/index.html --port 1235",
-        "setup:user": "ts-node --project scripts/tsconfig.json scripts/setupFirstUser.ts",
-        "analyze": "source-map-explorer build/static/js/index.*",
-        "svgr": "svgr",
-        "prettier": "prettier --write './src/**/*.{tsx,ts}'"
     },
     "devDependencies": {
         "@types/node": "^12.12.14",
