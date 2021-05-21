@@ -18,7 +18,7 @@ This *intern* folder contains a *backend* folder with incomplete code and a *fro
 
 Running this code displays a page with the e-shop. 
 
-The style is handled through the Bootstrap library. So the style is determined by all the `className=...`. You don't have to take care of that except if you want to reuse some style for what you add in the code. 
+The style is handled through the Bootstrap library (see [Bootstrap docs](https://getbootstrap.com/docs/5.0/getting-started/introduction/)). So the style is determined by all the `className=...`. You don't have to take care of that except if you want to reuse some style for what you add in the code. 
 
 
 ## How to run it
@@ -62,11 +62,11 @@ Backend missions:
   - Add code to start a local web server at port 8080 that handles all requests with Handler in the main function. 
 
 Frontend missions: 
-- Compute the total price of the products in the cart. 
+- Compute the total price of the products in the cart and display it (fill the code line 25 in `Cart.jsx`)
 - Add a remove button next to each product in the cart.
 - Show remaining stock for each product in the shop.
-- Disable adding a product to cart if there is no stock available anymore. 
-- Remove an item line from the cart if the quantity is zero.
+- Prevent user from adding a product to cart if there is no stock available anymore. 
+- Don't display an item line from the cart if the quantity is zero. 
 
 You are free to do whatever you want concerning the design of what you add but try to make it look good. You can reuse the style of already present components. 
 
