@@ -19,7 +19,8 @@ const App = () => {
     //   ['product 2 name']: number of products 2 in cart,
     //    .... 
     //  }
-    // A product item is either available or in cart. 
+    // A product item is either available or in cart so that
+    // product.stock = availableProducts[product.id] + inCartProducts[product.id]
     const [inCartProducts, setInCartProducts] = React.useState({})
 
     // Fetch products from the backend
@@ -29,22 +30,19 @@ const App = () => {
             .then((response) => response.json())
             .then((products) => {
                 setProducts(products.products)
+
+                // Initialize availableProducts and cartProducts
+                const initialAvailableProducts = products.products.reduce((acc, curr) => {
+                    return { ...acc, [curr.id]: curr.stock }
+                }, {})
+                const initialInCartProducts = products.products.reduce((acc, curr) => {
+                    return { ...acc, [curr.id]: 0 }
+                }, {})
+        
+                setAvailableProducts(initialAvailableProducts)
+                setInCartProducts(initialInCartProducts)
             })
     }, [])
-
-    
-    // Whenever products are fetched, we set availableProducts and inCartProducts to their initial values. 
-    React.useEffect(() => {
-        const initialAvailableProducts = products.reduce((acc, curr) => {
-            return { ...acc, [curr.id]: curr.stock }
-        }, {})
-        const initialInCartProducts = products.reduce((acc, curr) => {
-            return { ...acc, [curr.id]: 0 }
-        }, {})
-
-        setAvailableProducts(initialAvailableProducts)
-        setInCartProducts(initialInCartProducts)
-    }, [products])
 
     // Add a product to cart. 
     // Updating corresponding quantities in availableProducts and inCartProducts 
