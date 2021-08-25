@@ -1,4 +1,4 @@
-module github.com/bigbluedisco/tech-challenge/frontend/api
+module github.com/bigbluedisco/tech-challenge/frontend/v0/api
 
 require (
 	github.com/corpix/uarand v0.1.0 // indirect

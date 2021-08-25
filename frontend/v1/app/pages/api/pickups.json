@@ -1,0 +1,392 @@
+[
+  {
+    "address": "Parking Indigo (niveau -1)- 6 Place de la Concorde",
+    "city": "PARIS 8ème",
+    "identifier": "75999",
+    "latitude": 48.8666752,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": "09:00-12:00",
+        "day": 6
+      },
+      {
+        "openinghours": "10:00-12:00 14:00-19:00",
+        "day": 5
+      },
+      {
+        "openinghours": "10:00-12:00 14:00-19:00",
+        "day": 4
+      },
+      {
+        "openinghours": "10:00-12:00 14:00-19:00",
+        "day": 3
+      },
+      {
+        "openinghours": "10:00-12:00 14:00-19:00",
+        "day": 2
+      },
+      {
+        "openinghours": "10:00-12:00 14:00-16:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.3219998,
+    "name": "Antenne Chronopost de Paris Concorde",
+    "zipcode": "75008"
+  },
+  {
+    "address": "11-13 boulevard Ney",
+    "city": "PARIS 18ème",
+    "identifier": "75199",
+    "latitude": 48.8983362,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": "09:00-13:00",
+        "day": 6
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 5
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 4
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 3
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 2
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.3643737,
+    "name": "Agence Chronopost de Paris Boulevard Ney",
+    "zipcode": "75018"
+  },
+  {
+    "address": "123 rue Lecourbe",
+    "city": "PARIS",
+    "identifier": "75197",
+    "latitude": 48.842194,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": null,
+        "day": 6
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 5
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 4
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 3
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 2
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.301517,
+    "name": "Agence Chronopost Lecourbe",
+    "zipcode": "75015"
+  },
+  {
+    "address": "123 rue Lecourbe",
+    "city": "Paris",
+    "identifier": "75995",
+    "latitude": 48.8242374,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": null,
+        "day": 6
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 5
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 4
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 3
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 2
+      },
+      {
+        "openinghours": "09:00-18:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.3651653,
+    "name": "Agence Chronopost de Paris Gobelins",
+    "zipcode": "75015"
+  },
+  {
+    "address": "165 avenue Henri Barbusse",
+    "city": "BOBIGNY Cedex",
+    "identifier": "93998",
+    "latitude": 48.9111291,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": "09:00-14:00",
+        "day": 6
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:30",
+        "day": 5
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:30",
+        "day": 4
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:30",
+        "day": 3
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:30",
+        "day": 2
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:30",
+        "day": 1
+      }
+    ],
+    "longitude": 2.4331355,
+    "name": "Agence Chronopost de Bobigny",
+    "zipcode": "93000"
+  },
+  {
+    "address": "155 bld Charles de Gaulle",
+    "city": "VILLENEUVE LA GARENNE",
+    "identifier": "92999",
+    "latitude": 48.9447411,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": "08:00-12:00",
+        "day": 6
+      },
+      {
+        "openinghours": "08:00-13:00 14:00-16:00",
+        "day": 5
+      },
+      {
+        "openinghours": "08:00-13:00 14:00-16:00",
+        "day": 4
+      },
+      {
+        "openinghours": "08:00-13:00 14:00-16:00",
+        "day": 3
+      },
+      {
+        "openinghours": "08:00-13:00 14:00-16:00",
+        "day": 2
+      },
+      {
+        "openinghours": "08:00-13:00 14:00-16:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.3105794,
+    "name": "Agence Chronopost de Villeneuve la Garenne",
+    "zipcode": "92390"
+  },
+  {
+    "address": "82 rue de BAGNOLET",
+    "city": "PARIS",
+    "identifier": "75198",
+    "latitude": 48.7794822,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": "10:00-14:00",
+        "day": 6
+      },
+      {
+        "openinghours": "11:00-19:00",
+        "day": 5
+      },
+      {
+        "openinghours": "11:00-19:00",
+        "day": 4
+      },
+      {
+        "openinghours": "11:00-19:00",
+        "day": 3
+      },
+      {
+        "openinghours": "11:00-19:00",
+        "day": 2
+      },
+      {
+        "openinghours": "10:00-14:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.4285624,
+    "name": "Agence Chronopost de Bercy",
+    "zipcode": "75020"
+  },
+  {
+    "address": "2 Chemin de Villeneuve Saint-Georges - Rue Louis Warnier",
+    "city": "ALFORTVILLE",
+    "identifier": "75998",
+    "latitude": 48.7794822,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": "09:00-12:00",
+        "day": 6
+      },
+      {
+        "openinghours": "09:00-12:00 13:00-18:00",
+        "day": 5
+      },
+      {
+        "openinghours": "09:00-12:00 13:00-18:00",
+        "day": 4
+      },
+      {
+        "openinghours": "09:00-12:00 13:00-18:00",
+        "day": 3
+      },
+      {
+        "openinghours": "09:00-12:00 13:00-18:00",
+        "day": 2
+      },
+      {
+        "openinghours": "09:00-12:00 13:00-18:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.4285624,
+    "name": "Agence Chronopost de Alfortville",
+    "zipcode": "94140"
+  },
+  {
+    "address": "Centre technique routier D - 3 rue des Transports",
+    "city": "Rungis",
+    "identifier": "94999",
+    "latitude": 48.7549381,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": "09:00-13:00",
+        "day": 6
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 5
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 4
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 3
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 2
+      },
+      {
+        "openinghours": "09:00-19:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.366175,
+    "name": "Agence Chronopost de Rungis",
+    "zipcode": "94579"
+  },
+  {
+    "address": "43 boulevard André Citroën",
+    "city": "AULNAY SOUS BOIS",
+    "identifier": "93997",
+    "latitude": 48.959096,
+    "listopeninghours": [
+      {
+        "openinghours": null,
+        "day": 7
+      },
+      {
+        "openinghours": "09:00-13:00",
+        "day": 6
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:00",
+        "day": 5
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:00",
+        "day": 4
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:00",
+        "day": 3
+      },
+      {
+        "openinghours": "09:00-12:00 14:00-19:00",
+        "day": 2
+      },
+      {
+        "openinghours": "14:00-19:00",
+        "day": 1
+      }
+    ],
+    "longitude": 2.48586,
+    "name": "Agence Chronopost d'Aulnay",
+    "zipcode": "93600"
+  }
+]
