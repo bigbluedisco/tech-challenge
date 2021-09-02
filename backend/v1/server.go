@@ -14,7 +14,7 @@ import (
 
 func main() {
 	log := log.Default()
-	pt := store.NewProductTransactor()
+	ps := store.NewProductStore()
 
 	lis, err := net.Listen("tcp", "0.0.0.0:8000")
 	if err != nil {
@@ -26,7 +26,7 @@ func main() {
 	srv := grpc.NewServer(opts...)
 	defer srv.Stop()
 
-	prd := product.NewService(pt)
+	prd := product.NewService(ps)
 	productpb.RegisterServiceServer(srv, prd)
 
 	go func() {

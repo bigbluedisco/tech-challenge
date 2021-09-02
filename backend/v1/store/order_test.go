@@ -11,12 +11,16 @@ import (
 
 type orderStoreTestSuite struct {
 	suite.Suite
-	os *orderStore
+	s *orderStore
 }
 
 func (s *orderStoreTestSuite) SetupTest() {
-	s.os = &orderStore{
-		orders: []*order.Order{{Id: "1"}, {Id: "2"}, {Id: "3"}},
+	s.s = &orderStore{
+		m: map[string]*orderrpc.Order{
+			"1": {Id: "1"},
+			"2": {Id: "2"},
+			"3": {Id: "3"},
+		},
 	}
 }
 
@@ -25,28 +29,29 @@ func TestOrderStoreTestSuite(t *testing.T) {
 }
 
 func (s *orderStoreTestSuite) TestOrders_OK() {
-	s.Equal(s.os.orders, s.os.Orders())
+	s.Len(s.s.Orders(), 3)
+	s.Equal("1", s.s.Orders()[0].GetId())
 }
 
 func (s *orderStoreTestSuite) TestOrder_OK() {
-	pdt, err := s.os.Order("2")
+	o, err := s.s.Order("2")
 	s.Require().NoError(err)
-	s.Equal(s.os.orders[1], pdt)
+	s.Equal("2", o.GetId())
 }
 
 func (s *orderStoreTestSuite) TestOrder_Err() {
 	unknownID := "5"
-	od, err := s.os.Order(unknownID)
+	od, err := s.s.Order(unknownID)
 	s.Nil(od)
 	s.Error(err)
-	s.Equal("order not found: id="+unknownID, err.Error())
+	s.EqualError(err, "order not found")
 }
 
 func (s *orderStoreTestSuite) TestSetOrder_OK() {
-	od := &order.Order{Id: "4"}
-	s.os.SetOrder(od)
-	s.Len(s.os.orders, 4)
-	s.Equal(od, s.os.orders[3])
-	// reset the list
-	s.os.orders = s.os.orders[:3]
+	od := &orderrpc.Order{Id: "4"}
+	s.s.SetOrder(od)
+	s.Len(s.s.Orders(), 4)
+	o, err := s.s.Order("4")
+	s.Require().NoError(err)
+	s.Equal(od, o)
 }

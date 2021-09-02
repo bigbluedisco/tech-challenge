@@ -3,47 +3,69 @@
 package store
 
 import (
+	"sort"
+	"sync"
+
 	"github.com/bigbluedisco/tech-challenge/backend/v1/order/rpc"
 	"github.com/pkg/errors"
-	"sync"
 )
 
-type OrderTransactor interface {
-	Order(id string) (*order.Order, error)
-	Orders() []*order.Order
-	SetOrder(*order.Order)
+// Storage interface for orders.
+type OrderStore interface {
+	// Retrieve an order by ID from the store.
+	Order(id string) (*orderrpc.Order, error)
+	// Retrieve all orders in the store, sorted by id asc.
+	Orders() []*orderrpc.Order
+	// Upsert an order in the store.
+	SetOrder(*orderrpc.Order)
 }
 
 type orderStore struct {
-	lock   sync.RWMutex
-	orders []*order.Order
+	lock sync.RWMutex
+	m    map[string]*orderrpc.Order
 }
 
-func NewOrderTransactor() OrderTransactor {
-	return &orderStore{}
-}
-
-func (os *orderStore) Orders() []*order.Order {
-	return os.orders
-}
-
-func (os *orderStore) Order(id string) (*order.Order, error) {
-	for _, ord := range os.orders {
-		if ord.GetId() == id {
-			return ord, nil
-		}
+// Create a new order store.
+func NewOrderStore() OrderStore {
+	return &orderStore{
+		m: make(map[string]*orderrpc.Order),
 	}
-	return nil, errors.Errorf("order not found: id=%s", id)
 }
 
-func (os *orderStore) SetOrder(order *order.Order) {
-	os.lock.Lock()
-	for i, ord := range os.orders {
-		if ord.GetId() == order.GetId() {
-			os.orders[i] = order
-			break
-		}
+// Retrieve an order by ID from the store.
+func (s *orderStore) Orders() []*orderrpc.Order {
+	s.lock.RLock()
+	defer s.lock.RUnlock()
+
+	ods := make([]*orderrpc.Order, 0, len(s.m))
+	for _, o := range s.m {
+		ods = append(ods, o)
 	}
-	os.orders = append(os.orders, order)
-	os.lock.Unlock()
+
+	sort.Slice(ods, func(i, j int) bool {
+		return ods[i].GetId() < ods[j].GetId()
+	})
+
+	return ods
+}
+
+// Retrieve all orders in the store, sorted by id asc.
+func (s *orderStore) Order(id string) (*orderrpc.Order, error) {
+	s.lock.RLock()
+	defer s.lock.RUnlock()
+
+	o, ok := s.m[id]
+	if !ok {
+		return nil, errors.New("order not found")
+	}
+
+	return o, nil
+}
+
+// Upsert an order in the store.
+func (s *orderStore) SetOrder(o *orderrpc.Order) {
+	s.lock.Lock()
+	defer s.lock.Unlock()
+
+	s.m[o.GetId()] = o
 }
