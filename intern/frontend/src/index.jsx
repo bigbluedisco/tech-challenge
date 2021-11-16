@@ -48,23 +48,43 @@ const App = () => {
     // Updating corresponding quantities in availableProducts and inCartProducts 
     const onAddToCart = (productId) => {
         const availableBeforeAdd = availableProducts[productId]
-        setAvailableProducts({
-            ...availableProducts,
-            [productId]: availableBeforeAdd - 1,
-        })
-        const inCartBeforeAdd = inCartProducts[productId]
-        setInCartProducts({
-            ...inCartProducts,
-            [productId]: inCartBeforeAdd + 1,
-        })
+		if (availableBeforeAdd > 0) 
+		{
+			setAvailableProducts({
+				...availableProducts,
+				[productId]: availableBeforeAdd - 1,
+			})
+			const inCartBeforeAdd = inCartProducts[productId]
+			setInCartProducts({
+				...inCartProducts,
+				[productId]: inCartBeforeAdd + 1,
+			})
+		}
     }
 
+	// Remove a product from cart 
+    // Updating corresponding quantities in availableProducts and inCartProducts 
+    const onRemoveFromCart = (productId) => {
+        const availableBeforeAdd = availableProducts[productId]
+        const inCartBeforeAdd = inCartProducts[productId]
+		if (inCartBeforeAdd > 0) 
+		{
+			setAvailableProducts({
+				...availableProducts,
+				[productId]: availableBeforeAdd + 1,
+			})
+			setInCartProducts({
+				...inCartProducts,
+				[productId]: inCartBeforeAdd - 1,
+			})
+		}
+    }
     // What is displayed. 
     // Display the Shop component and the Cart component. 
     return (
         <div className="d-flex justify-content-between">
-            <Shop products={products} onAddToCart={onAddToCart} />
-            <Cart products={products} inCartProducts={inCartProducts} />
+            <Shop products={products} availableProducts={availableProducts} onAddToCart={onAddToCart} />
+            <Cart products={products} inCartProducts={inCartProducts} onRemoveFromCart={onRemoveFromCart} />
         </div>
     )
 }
