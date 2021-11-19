@@ -12,7 +12,7 @@ At Bigblue, our mission is to create the ultimate delivery experience for brands
 ## Guidelines
 
 - We value a clean, simple working solution. Some code is already provided, so that you just have to write over it.
-- The project must be submitted as a git repository (github, bitbucket, gitlab). Repository must avoid containing the words `bigblue` and `challenge`.
+- The project must be submitted as a private git repository (github, bitbucket, gitlab) or a zip file.
 - Having unit tests is a strong bonus.
 
 ## The project
