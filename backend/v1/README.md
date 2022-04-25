@@ -84,7 +84,7 @@ You should propose and implement the solution that validates the shipping addres
 - Otherwise, if some parts of the address cannot be recognized and the system fails to validate it, the order is not created and a response with an error code is returned.
 
 For this task, we provide an API that allows searching for addresses in France:
-[https://bigblue-challenge.vercel.app/api/backend/v1/addresse](https://bigblue-challenge.vercel.app/api/backend/v1/addresse) ([doc](./doc/address_api.pdf)). If the API doesn't return any results when called, the address is invalid and the order is not created. If the API returns 1 to N `Feature`s, your implementation should handle it and offer the best matching address. You are free to choose the criteria used to select the best `Feature`.
+[https://bigblue-challenge.vercel.app/api/backend/v1/addresse](https://bigblue-challenge.vercel.app/api/backend/v1/addresse) ([doc](./doc/address_api.pdf)). If the API doesn't return any results when called, the address is invalid and the order is not created. If the API returns 1 to N `Feature`s, your implementation should handle it and offer the best matching address.
 
 Be ready to stand up for your choices so that we can have an interesting discussion during the test debrief.
 
