@@ -21,7 +21,7 @@ The current codebase sets up a simple [gRPC](https://grpc.io/) API written in Go
 
 - a `product` service that exposes a fixed list of products
 - an `order` service to be implemented to manage orders
-- a `generate.sh` script to be executed  to generate client/server code based on the proto files.
+- a `generate.sh` script to be executed to generate client/server code based on the proto files.
 - a store used to mock persistent storage for orders and products. Read/write operations must only be done through the transactor interfaces.
   > ⚠️ The store code must not be edited.
 - a `server.go` entrypoint to initialize services and launch the API.
