@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"net/http"
 )
@@ -64,7 +65,6 @@ var products = []*Product{
 
 // Handler replies with the products response to any request
 func Handler(w http.ResponseWriter, r *http.Request) {
-
 	w.Header().Set("Access-Control-Allow-Origin", "*")
 
 	//// TODO
@@ -72,7 +72,7 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 	//// You can use the Marshal function of the json package
 	//// Don't forget to use the ProductsResponse structure
 	//// Should start with "b, err :="
-
+	b, err := json.Marshal(ProductsResponse{Products: products})
 	if err != nil {
 		http.Error(w, "Internal Server Error", http.StatusInternalServerError)
 		return
@@ -86,9 +86,12 @@ func Handler(w http.ResponseWriter, r *http.Request) {
 }
 
 func main() {
-
 	fmt.Println("Starting server at port 8080. URL: http://localhost:8080/")
 
 	//// TODO
 	//// Add code to start a local web server at port 8080 that handles all requests with Handler
+	err := http.ListenAndServe(":8080", http.HandlerFunc(Handler))
+	if err != nil {
+		fmt.Println("Error starting server:", err)
+	}
 }
